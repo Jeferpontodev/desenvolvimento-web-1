@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inscrição</title>
+</head>
+
+<body>
+
+    <h2>Sistema de Inscrição em Curso</h2>
+
+    <form id="formulario">
+
+        <p>Qual seu nome?</p>
+        <input type="text" name="seu_nome"
+            placeholder="Insira seu nome" required>
+        <br><br>
+
+        <p>Qual seu email?</p>
+        <input type="email" name="email"
+            placeholder="Insira seu e-mail" required>
+        <br><br>
+
+        <p>Qual sua senha?</p>
+        <input type="password" name="senha"
+            placeholder="Insira sua senha" required>
+        <br><br>
+
+        <p>Data de nascimento:</p>
+        <input type="date" name="nascimento" required>
+        <br><br>
+
+
+        <p>Qual seu curso desejado?</p>
+
+        <input type="radio"
+            id="desenvolvimento"
+            name="curso"
+            value="desenvolvimento"
+            required>
+        <label for="desenvolvimento">Desenvolvimento de Sistemas</label><br>
+
+        <input type="radio"
+            id="administracao"
+            name="curso"
+            value="administracao">
+        <label for="administracao">Administração</label><br>
+
+        <input type="radio"
+            id="recursos_humanos"
+            name="curso"
+            value="recursos_humanos">
+        <label for="recursos_humanos">Recursos Humanos</label><br>
+
+        <input type="radio"
+            id="ciencia_dados"
+            name="curso"
+            value="ciencia_dados">
+        <label for="ciencia_dados">Ciência de Dados</label><br>
+
+
+        <p>Qual seu turno?</p>
+
+        <input type="radio"
+            id="matutino"
+            name="turno"
+            value="Matutino"
+            required>
+        <label for="matutino">Matutino</label><br>
+
+        <input type="radio"
+            id="vespertino"
+            name="turno"
+            value="Vespertino">
+        <label for="vespertino">Vespertino</label><br>
+
+        <input type="radio"
+            id="noturno"
+            name="turno"
+            value="Noturno">
+        <label for="noturno">Noturno</label><br>
+
+
+        <p>Nível de interesse no curso?</p>
+
+        <input type="radio"
+            id="satisfeito"
+            name="nivel_interesse"
+            value="satisfeito"
+            required>
+        <label for="satisfeito">Satisfeito</label><br>
+
+        <input type="radio"
+            id="neutro"
+            name="nivel_interesse"
+            value="neutro">
+        <label for="neutro">Neutro</label><br>
+
+        <input type="radio"
+            id="insatisfeito"
+            name="nivel_interesse"
+            value="insatisfeito">
+        <label for="insatisfeito">Insatisfeito</label><br>
+
+
+        <div class="caixa">
+
+            <p>Enviar Documento</p>
+
+            <input type="file"
+                name="documento"
+                accept=".pdf,.doc,.docx">
+
+            <br>
+
+        </div>
+
+
+        <p>O que deseja fazer no curso?</p>
+
+        <input type="text"
+            name="objetivo"
+            placeholder="Conte um pouco"
+            required>
+        <br><br>
+
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+
+    <!-- Mensagem que aparecerá depois do envio -->
+    <p id="mensagem"></p>
+
+
+    <script>
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("mensagem").textContent =
+                "Inscrição enviada com sucesso!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

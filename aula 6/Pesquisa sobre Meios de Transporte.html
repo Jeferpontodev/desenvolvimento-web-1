@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Pesquisa sobre Meios de Transporte</h2>
+
+<form method="post" action="?hpme.html">
+
+<p>Qual seu nome?</p>
+        <br><br>
+        <input type="text" name="seu_nome"
+        placeholder="insira seu nome" required> <br><br>
+
+<p> data de nascimento: </p>
+        <input type="date" name="nascimento" required>
+        <br><br>
+<p>meio de transporte?</p>
+        <input type="radio"
+               id="Bicicleta"
+               name="meio_transporte"
+            value="bicicleta">
+            Bicicleta</label><br>
+        <input type="radio"
+               id="Carro"
+               name="meio_transporte"
+            value="carro">
+            Carro</label><br>
+        <input type="radio"
+               id="onibus"
+               name="meio_transporte"
+            value="onibus">
+            Ônibus</label><br>
+        <input type="radio"
+               id="Aplicativo de transporte"
+               name="meio_transporte"
+            value="aplicativo">
+            Aplicativo de transporte</label><br>
+        <input type="radio"
+               id="caminhada"
+               name="meio_transporte"
+            value="caminhada">
+            Caminhada</label><br>
+
+        <p>Quantidades de veiculos?</p>
+        <br><br>
+        <input type="text" name="quantidade_veiculos"
+        placeholder="insira a quantidade" required> <br><br> 
+
+        <p>Nível de satisfação com o transporte público, de 0 a 10;?</p>
+        <br><br>
+        <input type="text" name="nivel_satisfacao"
+        placeholder="insira o nível de satisfação" required> <br><br> 
+ 
+
+
+                <input type="submit" value="Enviar">
+</body>
+</html>

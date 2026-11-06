@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inscrição</title>
+</head>
+
+<body>
+
+    <h2>Agendamento de Atendimento Médico</h2>
+
+    <form id="formulario">
+
+        <p>Qual seu nome?</p>
+        <input type="text" name="seu_nome"
+            placeholder="Insira seu nome" required>
+        <br><br>
+
+        <p>Qual seu email?</p>
+        <input type="email" name="email"
+            placeholder="Insira seu e-mail" required>
+        <br><br>
+
+        <p>Data de nascimento:</p>
+        <input type="date" name="nascimento" required>
+        <br><br>
+
+        <p>Data da consulta:</p>
+        <input type="date" name="consulta" required>
+        <br><br>
+
+        <p>tipo de atendimento?</p>
+
+        <input type="radio"
+            id="consulta de rotina"
+            name="atendimento"
+            value="consulta de rotina"
+            required>
+        <label for="consulta de rotina">Consulta de Rotina</label><br>
+
+        <input type="radio"
+            id="retorno"
+            name="atendimento"
+            value="retorno">
+        <label for="retorno">Retorno</label><br>
+
+        <input type="radio"
+            id="exame"
+            name="atendimento"
+            value="exame">
+        <label for="exame">Exame</label><br>
+
+        <input type="radio"
+            id="atendimento prioritario"
+            name="atendimento"
+            value="atendimento prioritario">
+        <label for="atendimento prioritario">Atendimento Prioritário</label><br>
+
+
+        <p>Nível de dor ou desconforto, de 0 a 10?</p>
+
+        <input type="range"
+            name="nivel_dor"
+            min="0"
+            max="10"
+            required>
+
+<p>Descreva sua condição:</p>
+        <input type="text" name="condicao"
+            placeholder="Descreva sua condição" required>
+        <br><br>
+
+        <div class="caixa">
+
+            <p>Enviar exames</p>
+
+            <input type="file"
+                name="documento"
+                accept=".pdf,.doc,.docx">
+
+            <br>
+
+        </div>
+
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <p id="mensagem"></p>
+
+
+    <script>
+
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document.getElementById("mensagem").textContent =
+                "Inscrição enviada com sucesso!";
+
+        });
+
+    </script>
+
+</body>
+
+</html>
